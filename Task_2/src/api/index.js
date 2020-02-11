@@ -1,5 +1,5 @@
-import {getBaseUrl} from './config'
-import {getData} from './conection/rest'
+import { getBaseUrl } from './config'
+import { getData } from './conection/rest'
 
 export const getAllUser = () => {
     const url = getBaseUrl() + 'users'

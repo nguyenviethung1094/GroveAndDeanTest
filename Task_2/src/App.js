@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Contacts from './components/contact';
-import {getAllUser} from './api';
+import { getAllUser } from './api';
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
   }
 
 
-  render () {
+  render() {
     return (
       <Contacts contacts={this.state.contacts} />
     )
