@@ -1,0 +1,8 @@
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\bin\Debug\netstandard2.0\Task_3.Services.deps.json
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\bin\Debug\netstandard2.0\Task_3.Services.dll
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\obj\Debug\netstandard2.0\Task_3.Services.csprojAssemblyReference.cache
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\obj\Debug\netstandard2.0\Task_3.Services.AssemblyInfoInputs.cache
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\obj\Debug\netstandard2.0\Task_3.Services.AssemblyInfo.cs
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\bin\Debug\netstandard2.0\Task_3.Services.pdb
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\obj\Debug\netstandard2.0\Task_3.Services.dll
+C:\Users\Hung\Desktop\Grovedean\test\Task_3.Services\obj\Debug\netstandard2.0\Task_3.Services.pdb

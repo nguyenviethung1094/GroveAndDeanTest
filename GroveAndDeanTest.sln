@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task_3.Services", "Task_3.Services\Task_3.Services.csproj", "{70FB5633-7AA0-47C8-9CC5-DA19E6E11945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_3", "Task_3\Task_3.csproj", "{21148AF3-8C30-4B01-9655-8E2B441A9CA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task_1", "Task_1\Task_1.csproj", "{E0040ECF-8D7C-4282-AD2A-14990BCA92A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70FB5633-7AA0-47C8-9CC5-DA19E6E11945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FB5633-7AA0-47C8-9CC5-DA19E6E11945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FB5633-7AA0-47C8-9CC5-DA19E6E11945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FB5633-7AA0-47C8-9CC5-DA19E6E11945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21148AF3-8C30-4B01-9655-8E2B441A9CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21148AF3-8C30-4B01-9655-8E2B441A9CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21148AF3-8C30-4B01-9655-8E2B441A9CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21148AF3-8C30-4B01-9655-8E2B441A9CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0040ECF-8D7C-4282-AD2A-14990BCA92A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0040ECF-8D7C-4282-AD2A-14990BCA92A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0040ECF-8D7C-4282-AD2A-14990BCA92A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0040ECF-8D7C-4282-AD2A-14990BCA92A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F67B6AD-7298-45E0-96ED-48A98312A88B}
+	EndGlobalSection
+EndGlobal
