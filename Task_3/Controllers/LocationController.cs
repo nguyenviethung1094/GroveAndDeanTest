@@ -25,9 +25,9 @@ namespace Task_3.Controllers
         [Route("api/location/{id}")]
         public IHttpActionResult GetLocationDetail(string id)
         {
-            Dictionary<String, String> param = new Dictionary<string, string>();
-            param.Add("id", id);
-            var data = _service.GetData(null, null, param);
+            Dictionary<String, String> pathVariables = new Dictionary<string, string>();
+            pathVariables.Add("id", id);
+            var data = _service.GetData(null, pathVariables, null);
             return Ok(data);
         }
     }

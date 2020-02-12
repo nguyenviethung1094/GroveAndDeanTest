@@ -61,21 +61,33 @@ namespace Legacy.Web.Templates.Pages
             Ddl_Municipality.Items.Clear();
             Ddl_Municipality.Items.Add(new ListItem("", ""));
 
-            foreach (ContactPerson contactPerson in contactPersonList)
-            {
-                if (contactPerson.County.Equals(county))
-                {
-                    if (contactPerson.Municipality == "mrHeroy")
-                    {
-                        Ddl_Municipality.Items.Add(new ListItem("Herøy", contactPerson.Municipality));
-                    }
-                    else
-                    {
-                        Ddl_Municipality.Items.Add(new ListItem(contactPerson.Municipality));
-                    }
+            // foreach (ContactPerson contactPerson in contactPersonList)
+            // {
+                // if (contactPerson.County.Equals(county))
+                // {
+                    // if (contactPerson.Municipality == "mrHeroy")
+                    // {
+                        // Ddl_Municipality.Items.Add(new ListItem("Herøy", contactPerson.Municipality));
+                    // }
+                    // else
+                    // {
+                        // Ddl_Municipality.Items.Add(new ListItem(contactPerson.Municipality));
+                    // }
                     
-                }
-            }
+                // }
+            // }
+			
+			//Refactor Code:
+			foreach (ContactPerson contactPerson in contactPersonList)
+			{
+				if (contactPerson.County.Equals(county))
+				{
+					Ddl_Municipality.Items.Add(contactPerson.Municipality == "mrHeroy" ? new ListItem("Herøy", contactPerson.Municipality) : new ListItem(contactPerson.Municipality));                    
+				}
+			}
+
+			
+
         }
 
         /// <summary>
@@ -131,16 +143,19 @@ namespace Legacy.Web.Templates.Pages
             Page.Validate();
             if (Page.IsValid)
             {
-                if (SendFormContentByEmail())
-                {
-                    string receiptUrl = PropertyService.GetPageDataPropertyLinkUrl(CurrentPage, "FormReceiptPage");
-                    Response.Redirect(receiptUrl);
-                }
-                else
-                {
-                    string errorUrl = PropertyService.GetPageDataPropertyLinkUrl(CurrentPage, "FormErrorPage");
-                    Response.Redirect(errorUrl);
-                }
+                // if (SendFormContentByEmail())
+                // {
+                    // string receiptUrl = PropertyService.GetPageDataPropertyLinkUrl(CurrentPage, "FormReceiptPage");
+                    // Response.Redirect(receiptUrl);
+                // }
+                // else
+                // {
+                    // string errorUrl = PropertyService.GetPageDataPropertyLinkUrl(CurrentPage, "FormErrorPage");
+                    // Response.Redirect(errorUrl);
+                // }
+				
+				//Refactor Code:
+				Response.Redirect(PropertyService.GetPageDataPropertyLinkUrl(CurrentPage, SendFormContentByEmail() ? "FormReceiptPage" : "FormErrorPage"));
             }
         }
 
@@ -203,10 +218,13 @@ namespace Legacy.Web.Templates.Pages
             MailMessage mail = new MailMessage();
 
             //To
-            foreach (MailAddress attendee in receipents)
-            {
-                mail.To.Add(attendee);
-            }
+            // foreach (MailAddress attendee in receipents)
+            // {
+                // mail.To.Add(attendee);
+            // }
+			
+			//Refactor Code: use AddAll function
+			mail.To.AddAll(receipents)
 
             mail.From = from;
             mail.Subject = subject;
@@ -220,13 +238,16 @@ namespace Legacy.Web.Templates.Pages
             //Attachment
             if (attachmentCol != null)
             {
-                foreach (Attachment attachment in attachmentCol)
-                {
-                    if (attachment != null)
-                    {
-                        mail.Attachments.Add(attachment);
-                    }
-                }
+                // foreach (Attachment attachment in attachmentCol)
+                // {
+                    // if (attachment != null)
+                    // {
+                        // mail.Attachments.Add(attachment);
+                    // }
+                // }
+				
+				//Refactor Code: use AddAll function
+				mail.Attachments.AddAll(attachmentCol)
             }
 
             return mail;
@@ -254,6 +275,9 @@ namespace Legacy.Web.Templates.Pages
                         if (!StringValidationUtil.IsValidEmailAddress(singleToAddress.Address))
                         {
                             ok = false;
+							
+							//Refactor Code: should add break;
+							break;
                         }
                     }
 
